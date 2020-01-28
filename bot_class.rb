@@ -78,11 +78,11 @@ class BotClass
     when :mafia then bot.api.send_message(chat_id: message.chat.id, text: I18n.t(:killed) + HOMICIDE)
     when :only_yes then bot.api.send_message(chat_id: message.chat.id, text: I18n.t(:good) + THUMB_UP)
     when :only_no then bot.api.send_message(chat_id: message.chat.id, text: I18n.t(:bad) + THUMB_DOWN)
-    when :only_true
+    when :only_false
       if @player_roles[@victim] == :mafia then bot.api.send_message(chat_id: message.chat.id, text: I18n.t(:good) + THUMB_UP)
       else bot.api.send_message(chat_id: message.chat.id, text: I18n.t(:bad) + THUMB_DOWN)
       end
-    when :only_false
+    when :only_true
       if @player_roles[@victim] == :mafia then bot.api.send_message(chat_id: message.chat.id, text: I18n.t(:bad) + THUMB_DOWN)
       else bot.api.send_message(chat_id: message.chat.id, text: I18n.t(:good) + THUMB_UP)
       end
