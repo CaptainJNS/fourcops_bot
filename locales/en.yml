@@ -15,3 +15,11 @@ en:
   good: 'Yes'
   bad: 'No'
   final: 'Shall we continue or this is the end?'
+  help: |
+    /start_game - start new game
+    /stop_game - finish current game
+    /go - continue current game
+    /ru - переключить на русский язык
+    /en - switch to english
+    /rules - game rules
+    /help - help menu (you are already here)

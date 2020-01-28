@@ -9,6 +9,7 @@ class BotClass
         when '/ru' then I18n.locale = :ru
         when '/en' then I18n.locale = :en
         when '/rules' then show_rules(bot, message)
+        when '/help' then show_help(bot, message)
         end
       end
     end
@@ -98,5 +99,9 @@ class BotClass
   def show_rules(bot, message)
     rules = File.read('rules.txt')
     bot.api.send_message(chat_id: message.chat.id, text: rules)
+  end
+
+  def show_help(bot, message)
+    bot.api.send_message(chat_id: message.chat.id, text: I18n.t(:help))
   end
 end
