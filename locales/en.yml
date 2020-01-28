@@ -12,8 +12,8 @@ en:
   role_is: '%{player} has %{role} role'
   where_walks: 'Who will be checked by %{player}?'
   killed: 'Killing'
-  good: 'Yes'
-  bad: 'No'
+  good: 'The chosen player is LAWFUL CITIZIEN'
+  bad: 'The chosen player is MAFIA'
   final: 'Shall we continue or this is the end?'
   help: |
     /start_game - start new game
