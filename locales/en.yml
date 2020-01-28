@@ -1,0 +1,17 @@
+en:
+  start_game: 'Who will be playing?'
+  input_players: 'Write 5 player names splitted by space or comma'
+  stop_game: 'Nice game. Shall we start a new one?'
+  roles:
+    only_yes: 'always YES'
+    only_no: 'always NO'
+    only_true: 'always TRUE'
+    only_false: 'always FALSE'
+    mafia: 'MAFIA'
+  who_walks: 'Who is walking now?'
+  role_is: '%{player} has %{role} role'
+  where_walks: 'Who will be checked by %{player}?'
+  killed: 'Killing'
+  good: 'Yes'
+  bad: 'No'
+  final: 'Shall we continue or this is the end?'
