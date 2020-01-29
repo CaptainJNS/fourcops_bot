@@ -1,5 +1,5 @@
 en:
-  start_game: 'Who will be playing?'
+  start_game: 'Lets begin!'
   input_players: 'Write 5 player names splitted by space or comma'
   stop_game: 'Nice game. Shall we start a new one?'
   roles:
