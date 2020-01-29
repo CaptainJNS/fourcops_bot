@@ -10,6 +10,7 @@ class BotClass
         when '/en' then I18n.locale = :en
         when '/rules' then show_rules(bot, message)
         when '/help' then show_help(bot, message)
+        when '/new_team' then new_team(bot, message)
         end
       end
     end
@@ -37,9 +38,11 @@ class BotClass
   end
 
   def end_game(bot, message)
-    @players = nil
     @player_roles = nil
-    bot.api.send_message(chat_id: message.chat.id, text: I18n.t(:stop_game))
+    variants =
+      Telegram::Bot::Types::ReplyKeyboardMarkup
+      .new(keyboard: %w[/start_game /new_team], one_time_keyboard: true)
+    bot.api.send_message(chat_id: message.chat.id, text: I18n.t(:stop_game), reply_markup: variants)
   end
 
   def input_players(bot, message)
@@ -103,5 +106,10 @@ class BotClass
 
   def show_help(bot, message)
     bot.api.send_message(chat_id: message.chat.id, text: I18n.t(:help))
+  end
+
+  def new_team(bot, message)
+    @players = nil
+    start_game(bot, message)
   end
 end
